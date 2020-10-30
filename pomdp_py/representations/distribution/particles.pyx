@@ -11,8 +11,13 @@ cdef class Particles(GenerativeDistribution):
 
     def __str__(self):
         hist = self.get_histogram()
-        hist = [(k,hist[k]) for k in list(reversed(sorted(hist, key=hist.get)))]
-        return str(hist)
+        hist = [(k, hist[k]) for k in list(reversed(sorted(hist, key=hist.get)))]
+        # return str(hist)
+        out_str = ""
+        for h in hist:
+            out_str += "\n"
+            out_str += str(h)
+        return out_str
 
     def __len__(self):
         return len(self._particles)

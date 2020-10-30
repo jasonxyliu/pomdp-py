@@ -30,7 +30,7 @@ cpdef particle_reinvigoration(Particles particles,
 
     if len(new_particles) > num_particles:
         return new_particles
-    
+
     print("Particle reinvigoration for %d particles" % (num_particles - len(new_particles)))
     cdef State next_state    
     while len(new_particles) < num_particles:

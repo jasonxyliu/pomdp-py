@@ -666,4 +666,3 @@ cpdef sample_explict_models(TransitionModel T, ObservationModel O, RewardModel R
         return next_state, observation, reward, nsteps
     else:
         return next_state, reward, nsteps
-    
